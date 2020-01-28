@@ -8,6 +8,7 @@ public class PlayerController : MonoBehaviour
     public Rigidbody2D playerRB;
     public Animator playerMoveAnim;
     public static PlayerController instance;
+    public string areaTransitionName;
 
     void Start()
     {
