@@ -7,9 +7,19 @@ public class PlayerController : MonoBehaviour
     public float moveSpeed;
     public Rigidbody2D playerRB;
     public Animator playerMoveAnim;
+    public static PlayerController instance;
 
     void Start()
     {
+        if(instance == null)
+        {
+            instance = this;
+        }
+        else
+        {
+            Destroy(this.gameObject);
+        }
+        
         DontDestroyOnLoad(this.gameObject);
     }
 
