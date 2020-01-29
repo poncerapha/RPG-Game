@@ -257,6 +257,15 @@ Tilemap:
   m_GameObject: {fileID: 662426686}
   m_Enabled: 1
   m_Tiles:
+  - first: {x: 13, y: -8, z: 0}
+    second:
+      m_TileIndex: 14
+      m_TileSpriteIndex: 14
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_ObjectToInstantiate: {fileID: 0}
+      m_TileFlags: 1
+      m_ColliderType: 1
   - first: {x: -9, y: -1, z: 0}
     second:
       m_TileIndex: 2
@@ -1475,6 +1484,8 @@ Tilemap:
     m_Data: {fileID: 11400000, guid: 610867bd84d605f48b9fb95b96ea58dc, type: 2}
   - m_RefCount: 1
     m_Data: {fileID: 11400000, guid: af64b1d3f0f2db943b138bf967ffe832, type: 2}
+  - m_RefCount: 1
+    m_Data: {fileID: 11400000, guid: 4c0804643b1471345a890990aa24a489, type: 2}
   m_TileSpriteArray:
   - m_RefCount: 60
     m_Data: {fileID: 21300970, guid: af6bc9dfbb9b08e4890cf8e4b8dd00c3, type: 3}
@@ -1504,8 +1515,10 @@ Tilemap:
     m_Data: {fileID: 21300414, guid: af6bc9dfbb9b08e4890cf8e4b8dd00c3, type: 3}
   - m_RefCount: 1
     m_Data: {fileID: 21300416, guid: af6bc9dfbb9b08e4890cf8e4b8dd00c3, type: 3}
+  - m_RefCount: 1
+    m_Data: {fileID: 21300470, guid: af6bc9dfbb9b08e4890cf8e4b8dd00c3, type: 3}
   m_TileMatrixArray:
-  - m_RefCount: 132
+  - m_RefCount: 133
     m_Data:
       e00: 1
       e01: 0
@@ -1524,12 +1537,12 @@ Tilemap:
       e32: 0
       e33: 1
   m_TileColorArray:
-  - m_RefCount: 132
+  - m_RefCount: 133
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_AnimationFrameRate: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Origin: {x: -9, y: -1, z: 0}
-  m_Size: {x: 26, y: 6, z: 1}
+  m_Origin: {x: -9, y: -8, z: 0}
+  m_Size: {x: 26, y: 13, z: 1}
   m_TileAnchor: {x: 0.5, y: 0.5, z: 0}
   m_TileOrientation: 0
   m_TileOrientationMatrix:
@@ -1569,59 +1582,71 @@ CompositeCollider2D:
   m_ColliderPaths:
   - m_Collider: {fileID: 662426692}
     m_ColliderPaths:
-    - - X: 119999971
+    - - X: 119999942
         Y: 0
-      - X: 119999971
+      - X: 119999942
         Y: 50000000
       - X: -90000000
-        Y: 49999971
-      - X: -89999971
+        Y: 49999942
+      - X: -89999942
         Y: 0
-    - - X: 156250002
+    - - X: 156250004
         Y: 0
       - X: 160000000
-        Y: 624964
-      - X: 160000029
+        Y: 624928
+      - X: 160000058
         Y: 0
-      - X: 167500005
-        Y: 3
-      - X: 168750003
-        Y: 625013
+      - X: 167500010
+        Y: 6
+      - X: 168750006
+        Y: 625026
       - X: 170000000
-        Y: 7499993
-      - X: 169999987
-        Y: 22500009
-      - X: 161875006
-        Y: 27500002
-      - X: 159999996
+        Y: 7499989
+      - X: 169999974
+        Y: 22500018
+      - X: 161875004
+        Y: 27500004
+      - X: 159999992
         Y: 28125000
-      - X: 159374999
-        Y: 28124996
+      - X: 159374991
+        Y: 28124992
       - X: 150000000
-        Y: 21874987
+        Y: 21874974
       - X: 150000000
-        Y: 4374997
-      - X: 150625016
+        Y: 4374994
+      - X: 150625040
         Y: 0
+    - - X: 140000012
+        Y: -80000100
+      - X: 140000012
+        Y: -69999900
+      - X: 129999900
+        Y: -69999988
+      - X: 129999988
+        Y: -80000100
   m_CompositePaths:
     m_Paths:
-    - - {x: 11.999994, y: 0}
-      - {x: 11.999994, y: 5}
-      - {x: -9, y: 4.9999943}
-      - {x: -8.999994, y: 0}
+    - - {x: 11.999991, y: 0}
+      - {x: 11.999991, y: 5}
+      - {x: -9, y: 4.9999914}
+      - {x: -8.999991, y: 0}
     - - {x: 15.625, y: 0}
-      - {x: 16, y: 0.0624928}
-      - {x: 16.000006, y: 0}
-      - {x: 16.750002, y: 0.0000006}
-      - {x: 16.875, y: 0.0625026}
-      - {x: 17, y: 0.7499989}
-      - {x: 16.999996, y: 2.250002}
-      - {x: 16.187502, y: 2.7500005}
-      - {x: 16, y: 2.8125}
-      - {x: 15.937499, y: 2.8124993}
-      - {x: 15, y: 2.1874974}
-      - {x: 15, y: 0.4374994}
-      - {x: 15.062504, y: 0}
+      - {x: 16, y: 0.0624892}
+      - {x: 16.000008, y: 0}
+      - {x: 16.750002, y: 0.00000090000003}
+      - {x: 16.875002, y: 0.062503904}
+      - {x: 17, y: 0.7499985}
+      - {x: 16.999996, y: 2.2500029}
+      - {x: 16.187502, y: 2.7500007}
+      - {x: 15.999999, y: 2.8125}
+      - {x: 15.937498, y: 2.8124988}
+      - {x: 15, y: 2.187496}
+      - {x: 15, y: 0.4374991}
+      - {x: 15.062506, y: 0}
+    - - {x: 13.999998, y: -8.00001}
+      - {x: 13.999998, y: -6.9999905}
+      - {x: 12.99999, y: -7.000002}
+      - {x: 13.000002, y: -8.00001}
   m_VertexDistance: 0.0005
   m_OffsetDistance: 0.000005
 --- !u!50 &662426691
