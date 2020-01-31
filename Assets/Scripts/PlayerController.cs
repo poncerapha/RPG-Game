@@ -20,7 +20,10 @@ public class PlayerController : MonoBehaviour
         }
         else
         {
-            Destroy(this.gameObject);
+            if(instance != this)
+            {
+                Destroy(this.gameObject);
+            }   
         }
         
         DontDestroyOnLoad(this.gameObject);
