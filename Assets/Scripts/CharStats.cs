@@ -14,6 +14,7 @@ public class CharStats : MonoBehaviour
     public int maxHP = 100;
     public int currentMP;
     public int maxMP = 30;
+    public int[] mpLvlBonus;
     public int strength;
     public int defence;
     public int weaponPower;
@@ -46,11 +47,34 @@ public class CharStats : MonoBehaviour
     public void addExp(int expToAdd)
     {
         currentEXP += expToAdd;
-        if(currentEXP > expToNextLevel[playerLevel])
-        {
-            currentEXP -= expToNextLevel[playerLevel];
 
-            playerLevel++;
+        if(playerLevel < maxLevel)
+        {
+            if(currentEXP > expToNextLevel[playerLevel])
+        {
+                currentEXP -= expToNextLevel[playerLevel];
+
+                playerLevel++;
+
+                if (playerLevel % 2 == 0)
+                {
+                    strength++;
+                }
+                else
+                {
+                    defence++;
+                }
+
+                maxHP = Mathf.FloorToInt(maxHP * 1.05f);
+                currentHP = maxHP;
+
+                maxMP += mpLvlBonus[playerLevel];
+                currentMP = maxMP;
+            }
         }
+        if(playerLevel >= maxLevel)
+        {
+            currentEXP = 0;
+        }    
     }
 }
