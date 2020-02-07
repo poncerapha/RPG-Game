@@ -12,6 +12,7 @@ public class GameMenu : MonoBehaviour
     public Slider[] expSlider;
     public Image[] charImage;
     public GameObject[] charStatHolder;
+    public GameObject[] windows;
 
     // Start is called before the first frame update
     void Start()
@@ -26,8 +27,7 @@ public class GameMenu : MonoBehaviour
         {
             if (menu.activeSelf)
             {
-                menu.SetActive(false);
-                GameManager.instance.gameMenuOpen = false;
+                CloseMenu();
             }
             else
             {
@@ -63,7 +63,31 @@ public class GameMenu : MonoBehaviour
                 charStatHolder[i].SetActive(false);
             }
         }
+    }
 
+    public void ToggleWindow(int windowNumber)
+    {
+        for(int i=0; i < windows.Length; i++)
+        {
+            if(i == windowNumber)
+            {
+                windows[i].SetActive(!windows[i].activeInHierarchy);
+            }
+            else
+            {
+                windows[i].SetActive(false);
+            }
+        }
+    }
 
+    public void CloseMenu()
+    {
+        for(int i =0; i < windows.Length; i++)
+        {
+            windows[i].SetActive(false);
+        }
+
+        menu.SetActive(false);
+        GameManager.instance.gameMenuOpen = false;
     }
 }
