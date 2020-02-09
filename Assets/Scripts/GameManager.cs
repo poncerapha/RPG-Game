@@ -112,6 +112,27 @@ public class GameManager : MonoBehaviour
 
     public void RemoveItem(string itemToRemove)
     {
+        int newItemPos = 0;
+        bool foundSpace = false;
 
+        for (int i = 0; i < itensHeld.Length; i++)
+        {
+            if (itensHeld[i] == itemToRemove)
+            {
+                newItemPos = i;
+                i = itensHeld.Length;
+                foundSpace = true;
+            }
+        }
+        if (foundSpace)
+        {
+            numberOfItem[newItemPos]--;
+            if(numberOfItem[newItemPos] <= 0){
+                itensHeld[newItemPos] = "";
+            }
+            GameMenu.instance.ShowItems();
+        }
     }
+
+   
 }
