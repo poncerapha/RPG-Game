@@ -237,3 +237,12 @@ MonoBehaviour:
   gameMenuOpen: 0
   dialogActive: 0
   fadingBetweenAreas: 0
+  itensHeld: []
+  numberOfItem: 
+  referenceItem:
+  - {fileID: 7089432203582001, guid: 5161fd294704e434c8d6031ba6986212, type: 3}
+  - {fileID: 1300962129631119797, guid: 257ff477b09e0bb40978e57107cfa9e9, type: 3}
+  - {fileID: 6926028714683003680, guid: 90fe413238df648458191b4f33930bcc, type: 3}
+  - {fileID: 8014827550389825995, guid: ece817b3f1de14b44ba2f87c75d2d49c, type: 3}
+  - {fileID: 4924134932966862613, guid: 9a99c4eec50b25a49a6408429b97957f, type: 3}
+  - {fileID: 8792134965518953477, guid: 7cef98845e513d1459d4152b532065d7, type: 3}
